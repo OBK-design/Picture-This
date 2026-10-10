@@ -15,6 +15,75 @@
         <h4>My Really Cool Blog Post</h4>
       </div>
       <picture>
+        <!-- AI use: I used Claude to help me map the image table to the right source order and srcset values-->
+        <!-- sources come on top of the img, going from biggest screens width to the smallest -->
+        <source
+          srcset="
+            images/museum-800x800.jpg,
+            images/museum-1600x1600.jpg 2x,
+            images/museum-2400x2400.jpg 3x
+          "
+          media="(min-width: 1600px)"
+          width="800"
+          height="800"
+        />
+        <source
+          srcset="
+            images/museum-640x640.jpg,
+            images/museum-1280x1280.jpg 2x,
+            images/museum-1920x1920.jpg 3x
+          "
+          media="(min-width: 1280px)"
+          width="640"
+          height="640"
+        />
+        <!-- Each source has it width to the smallest image, and when possible it switch to a higher quality image-->
+        <source
+          srcset="
+            images/museum-480x480.jpg,
+            images/museum-960x960.jpg   2x,
+            images/museum-1440x1440.jpg 3x
+          "
+          media="(min-width: 960px)"
+          width="480"
+          height="480"
+        />
+        <!-- Max-width goes from the smallest up, so the first match is the closest fit -->
+        <source
+          srcset="
+            images/museum-320x180.jpg,
+            images/museum-640x360.jpg 2x,
+            images/museum-960x540.jpg 3x
+          "
+          media="(max-width: 320px)"
+          width="320"
+          height="180"
+        />
+
+        <source
+          srcset="
+            images/museum-480x270.jpg,
+            images/museum-960x540.jpg  2x,
+            images/museum-1440x810.jpg 3x
+          "
+          media="(max-width: 480px)"
+          width="480"
+          height="270"
+        />
+
+        <source
+          srcset="
+            images/museum-720x405.jpg,
+            images/museum-1440x810.jpg  2x,
+            images/museum-2160x1215.jpg 3x
+          "
+          media="(max-width: 720px)"
+          width="720"
+          height="405"
+        />
+
+        <!-- added img on the bottom so it always shows a image-->
+        <!-- it also covers screens between 721 and 959px, where no source matches -->
         <img
           src="images/museum-960x540.jpg"
           srcset="
@@ -24,7 +93,7 @@
           "
           width="960"
           height="540"
-          alt="the museum loby"
+          alt="Interior of a museum lobby"
         />
       </picture>
     </header>
