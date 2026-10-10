@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Picture This!</title>
-    <link rel="stylesheet" href="/styles/style.css" />
+    <link rel="stylesheet" href="styles/style.css" />
   </head>
 
   <body>
@@ -15,8 +15,17 @@
         <h4>My Really Cool Blog Post</h4>
       </div>
       <picture>
-        <source />
-        <img src="images/museum.jpg" alt="placeholder" />
+        <img
+          src="images/museum-960x540.jpg"
+          srcset="
+            images/museum-960x540.jpg,
+            images/museum-1920x1080.jpg 2x,
+            images/museum-2880x1620.jpg 3x
+          "
+          width="960"
+          height="540"
+          alt="the museum loby"
+        />
       </picture>
     </header>
   </body>
