@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto:300,700&display=swap");
-/* added marigin and max width as said in the feedback*/
+/* added marigin and max width to limit the page to 1600px to match the biggets viewport in the image table*/
 html,
 body {
   margin: 0 auto;
@@ -29,13 +29,13 @@ h4 {
   font-size: 1.5rem;
   font-weight: 300;
 }
-
+/* the image fill it's space with 100% width and auto will keep the proportions so the html doesnt squish the image*/
 img {
   display: block;
   width: 100%;
   height: auto;
 }
-
+/* at 960px the header becomes a two columns,so the break point is the same in my html to switch to the square image*/
 @media (min-width: 960px) {
   .header {
     grid-template-columns: repeat(2, 1fr);
